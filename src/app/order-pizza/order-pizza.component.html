@@ -1,0 +1,46 @@
+<span >
+    <div class="container-fluid row justify-content-center ">
+        <div *ngFor= "let p of pizza " id="div" class="container border border-white  p-3 m-2 col-sm-5 rounded row ">
+            <div class="container col-md-2">
+
+                <div><b>{{p.name}}</b></div>
+      
+                <div *ngIf="p.type==='veg'; else elseBlock" >
+                  <img src="assets/veg.png " class =" h-50 w-50 img-responsive">
+                  
+                </div>
+                <div>
+                <ng-template #elseBlock>
+                  <img src="assets/nonveg.png" class="h-20 w-50">
+                </ng-template>
+                </div>
+                
+      
+                <p>₹ &nbsp;{{p.price}}</p>
+      
+              </div>
+      
+              <div class="container col-md-6">
+      
+                <div><p>{{p.description}}</p></div>
+      
+                <div><p><b>Ingredients: </b>{{p.ingredients}}</p></div>
+      
+                <p><b>Toppings: </b>{{p.topping}}</p>
+      
+              </div>
+      
+              <div class="container col-md-4">
+      
+                <div><img src="{{p.image}}" class="w-75 h-75 p-2 m-3"/></div>
+                <button type="button" class="btn btn-warning m-3 p-2" (click)="addToCart()">Add to Cart</button>
+      
+              </div>
+            
+            
+            
+        </div>
+    </div>
+    
+    
+</span>

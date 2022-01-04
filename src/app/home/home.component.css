@@ -1,0 +1,11 @@
+.align-middle{
+    display: table-cell;
+    vertical-align: middle;
+}
+/* span{
+    background-color:#F8F8FF;
+} */
+
+.home{
+    background-color: #ADD8E6;
+}
